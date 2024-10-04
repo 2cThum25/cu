@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Bonito</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>cuzinho hoje? ♡</h1>
+        <div class="options">
+            <button class="option" id="yes" onclick="redirect()">Sim</button>
+            <button class="option" id="no" onclick="changeTheme()">Não</button>
+        </div>
+    </div>
+    <div id="sadText" class="hidden">Rafa Ficou Triste</div>
+
+    <script>
+        function redirect() {
+            window.location.href = "https://www.youtube.com/watch?v=qoTHW1-0R6Q";
+        }
+
+        function changeTheme() {
+            document.body.style.background = "#666";
+            document.querySelector('.container').style.border = "2px solid #444";
+            document.querySelector('.container').style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.5)";
+            document.querySelector('.container').style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+            document.querySelector('h1').textContent = "cuzinho hj pfvr 💔";
+            document.querySelector('h1').style.color = "#aaa";
+            document.querySelectorAll('.option').forEach(button => {
+                button.style.backgroundColor = "#444";
+                button.style.borderColor = "#aaa";
+                button.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
+            });
+            document.getElementById('sadText').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
